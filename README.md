@@ -105,8 +105,10 @@ Send and array of device Ids in `testingDevices? to use production like ads on y
 Open our Ionic app **app.component.ts** file and add this following code.
 
 ```ts
+import { AdMobPlugin } from '@capacitor-community/admob';
 import { Plugins } from '@capacitor/core';
-const { AdMob } = Plugins;
+
+const AdMob = Plugins.AdMob as AdMobPlugin;
 
 @Component({
   selector: 'app-root',
